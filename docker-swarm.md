@@ -1,5 +1,6 @@
-## OS: Ubuntu
-root@...
+# DOCKER SWARM
+
+- OS: Linux root@...
 
 ## Install using the convenience script:
 ```cmd

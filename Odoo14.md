@@ -1,4 +1,12 @@
+python 3.7+
+install : Build Tools for Visual Studio
+install : postgresql
+
 ```cmd
+pip install setuptools wheel
+
+pip install -r requirements.txt
+
 python -m pip install --upgrade pip
 
 python odoo-bin --stop-after-init -s -c .\odoo.conf

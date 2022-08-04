@@ -2,6 +2,8 @@ python 3.7+
 install : Build Tools for Visual Studio
 install : postgresql
 
+git clone https://github.com/odoo/odoo.git odoo14_2 --depth=1 -b 14.0
+
 ```cmd
 pip install setuptools wheel
 

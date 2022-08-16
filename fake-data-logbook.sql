@@ -1,3 +1,5 @@
+-- alter sequence log_book_id_seq restart with 101;
+
 INSERT INTO public.log_book(
 	id, create_date, "number", postal_type, recipient_name, destination, barcode, weight, service_charge, note, create_uid, write_uid, write_date)
 	VALUES (1, '2022-02-06', '1', '2', 'Miran Franzen', 'A6-4B-B1-CF-A6-6B', '910816790', 703.73, 1772.29, 'ut tellus nulla ut erat id mauris vulputate elementum nullam varius', '8', '8', '2022-07-19');

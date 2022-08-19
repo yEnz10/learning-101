@@ -3,7 +3,9 @@ install : Build Tools for Visual Studio
 install : postgresql
 
 git clone https://github.com/odoo/odoo.git <folder_name> --depth=1 -b 14.0
+
 https://speedysense.com/odoo-module-structure/
+
 ```cmd
 pip install setuptools wheel
 

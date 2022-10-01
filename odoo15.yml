@@ -1,0 +1,35 @@
+version: '3.8'
+
+volumes:
+  web-data:
+  db-data:
+  
+services:
+  web:
+    container_name: odoo
+    image: odoo:15.0
+    depends_on:
+      - db
+    ports:
+      - "8061:8069"
+    volumes:
+      - web-data:/var/lib/odoo
+      - /config:/etc/odoo
+      - /addons:/mnt/extra-addons
+    environment:
+      - HOST=db
+      - USER=myodoo
+      - PASSWORD=g8iupf@1234
+      
+  db:
+    container_name: db
+    image: postgres:14
+    ports:
+      - "5001:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=g8iupf@1234
+      - POSTGRES_USER=myodoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
